@@ -14,4 +14,6 @@ git clone https://github.com/DanielFreitasFerreira/projeto-pizza.git
 Execute o arquivo <b>index.html</b> em um navegador web de sua preferência.
 
 ## Contribuição
-Pull requests são beem-vindas. Para futuras melhorias no projeto, caso você gostaria de mudar no projeto.
+Pull requests são bem-vindas. Para futuras melhorias no projeto, caso você gostaria de mudar no projeto.
+
+## 🚧 Projeto em contrução
