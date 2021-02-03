@@ -2,7 +2,7 @@ const query = (el) => document.querySelector(el);
 const all = (el) => document.querySelectorAll(el);
 
 pizzaJson.map((item, index) => {
-  let pizzaItem = query('.models .pizza-item').cloneNode(true);
+  const pizzaItem = query('.models .pizza-item').cloneNode(true);
 
   pizzaItem.setAttribute('data-key', index);
   pizzaItem.querySelector('.pizza-item--img img').src = item.img;
@@ -12,8 +12,15 @@ pizzaJson.map((item, index) => {
   pizzaItem.querySelector('a').addEventListener('click', (e) => {
     e.preventDefault();
     const key = e.target.closest('.pizza-item').getAttribute('data-key');
-    console.log("Pizza clicada" + key);
+    
+    query('.pizzaInfo h1').innerHTML = pizzaJson[key].name;
+    query('.pizzaInfo--desc').innerHTML = pizzaJson[key].description;
+    query('.pizzaBig img').src = pizzaJson[key].img;
+    query('.pizzaInfo--price').innerHTML = `R$ ${pizzaJson[key].price.toFixed(2).replace('.',',')}`;
 
+
+
+    // Interação modal
     query('.pizzaWindowArea').style.opacity = 0;
     query('.pizzaWindowArea').style.display = 'flex';
     setTimeout(() => {
