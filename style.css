@@ -244,6 +244,7 @@ h1 {
     background-color:#48d05f;
     color:#FFF;
     display:inline-block;
+    font-weight: bold;
     cursor:pointer;
     margin-right:30px;
 }
@@ -251,8 +252,18 @@ h1 {
     background-color:#32a345;
 }
 .pizzaInfo--cancelButton {
+    margin-top:30px;
+    padding:20px 30px;
+    border-radius:20px;
+    background-color:#fd3d3d;
+    color:#FFF;
     display:inline-block;
     cursor:pointer;
+    font-weight: bold;
+    margin-right:30px;
+}
+.pizzaInfo--cancelButton:hover {
+    background-color: #ff0000;
 }
 .pizzaInfo--cancelMobileButton {
     display:none;
@@ -419,5 +430,6 @@ h1 {
     }
     .pizzaInfo--cancelMobileButton {
         display:block;
+        cursor: pointer;
     }
 }
