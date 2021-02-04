@@ -1,6 +1,7 @@
 const query = (el) => document.querySelector(el);
 const all = (el) => document.querySelectorAll(el);
 
+// Listando as pizzas
 pizzaJson.map((item, index) => {
   const pizzaItem = query('.models .pizza-item').cloneNode(true);
 
@@ -34,6 +35,17 @@ pizzaJson.map((item, index) => {
   // preencher as informações
   query('.pizza-area').append(pizzaItem);
 
+});
+
+// Evento Modal
+function closeModal() {
+  query('.pizzaWindowArea').style.opacity = 0;
+  setTimeout(() => {
+    query('.pizzaWindowArea').style.display = 'none';
+  }, 500);
+}
+query('pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach((item) => {
+  item.addEventListener('click', closeModal);
 });
 
 
